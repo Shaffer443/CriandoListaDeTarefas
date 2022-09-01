@@ -189,3 +189,11 @@ form{
 
 }
 
+footer{
+
+    text-align: center;
+    top:50%; /*Deixando centralizado*/
+    left:40%; 
+
+    font-size: 12px;
+}
