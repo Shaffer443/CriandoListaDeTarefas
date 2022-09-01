@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/stylos.css" rel="stylesheet">
+    
+</head>
+<body>
+
+    <div class="conteudo">
+        <div class="topo">
+            <input type="text" id="inputNovaTarefa" placeholder="Adicione sua nova tarefa">
+            <button id="btnAddTarefa">
+                <i class="fa fa-plus"></i> <!--Nome da classe pega os icons anexados, tem que ser exatamente este nome para fazer a conexão-->
+            </button>
+        </div>
+
+    
+                                
+        <ul id="listaTarefas"> <!--item fake para construção-->
+           
+            <!--<li>
+                <span class="textoTarefa">Terefa 1</span> 
+                <div>
+                    <button class="btnAcao">
+                        <i class="fa-escrever"></i>
+                    </button>
+
+                    <button class="btnAcao">
+                        <i class="fa-lixeira"></i>
+                    </button>
+                </div>
+            </li>-->
+        </ul>
+    </div>
+
+    <div id="janelaEdicao"> <!--Criação da Janela de Edição-->
+        <button id="fecharJanelaEdicao">
+            <i class="fa fa-remove"></i>
+        </button>
+        <h2 id="idTarefaEdicao">#001(exemplo)</h2>
+        <hr>
+        <form>
+            <div class="form_linha">
+                <label for="nome">Nome</label>
+                <input type="text" id="inputTarefaNomeEdicao">
+            </div>
+
+            <div class="form_linha">
+
+                <button id="botaoAtualizarTarefa">Salvar</button>
+
+            </div>
+        </form>
+    </div>
+
+    <div id="janelaEdicaoFundo"></div>
+
+    <script src="js/tarefas.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,191 @@
+body{
+    background: #000;
+    color:#fff;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.conteudo{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 450px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #2b2a2a;
+    padding: 55px;
+    border-radius: 12px;
+}
+
+.topo{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+
+}
+
+.topo input{
+    width: 350px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #191818;
+    outline: none;/*gera um efeito de marcação nas bordas quando se vai preencer este campo. No "NONE", ele não marca*/
+    font-size: 20px;
+    background: #191818;
+    color: #fff
+}
+
+.topo button{
+    width: 45px;
+    border-radius: 12px;
+    border: 1px solid #191818;
+    background: #191818;
+    color: #fff;
+    outline: none;
+
+
+}
+
+.topo button:hover{
+    background: #1f1e1e;
+    cursor: pointer;
+
+}
+
+#listaTarefas{
+    list-style-type: none; /*Eliminando a bolinha de amrcação de um item*/
+    padding: 0;
+    margin: 0;
+
+}
+
+#listaTarefas li{
+    padding: 20px;
+    margin-top: 20px;
+    background: #191818;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnAcao{
+    border-radius: 12px;
+    border: 1px solid #191818;
+    width: 38px;
+    height: 38px;
+    margin-right: 8px;
+    cursor: pointer;
+    background: #2b2a2a;
+    color:#fff;
+}
+
+.btnAcao:hover{
+    background: #3c3a3a;
+}
+
+.textoTarefa{ /*Ideia desta configuração é não haver quebra de linhas ni input das tarefas. Estja tuodo o texto ema penas uma linhas*/
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 290px;
+    white-space: nowrap;
+}
+
+#janelaEdicao{
+    position: fixed;
+    top:50%; /*Deixando centralizado*/
+    left:50%; /*Deixando centralizado*/
+    transform: translate(-50%,-50%); /*ajustando a centralização cima, baixo*/
+    padding: 20px;
+    background: #191818;
+    border: 1px solid #2f2e2e;
+    width: 415px;
+    border-radius: 12px;
+    z-index: 200; /*Aparece sobre a tela principal, que o outro z-index é de 100, este precisa ser maior*/
+    display: none;
+}
+
+#janelaEdicao.abrir{
+
+    display: block !important; /*!important - subescreve um regra anterior*/
+    
+}
+
+#janelaEdicaoFundo{
+    position: fixed;
+    top: 0;
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    opacity: 0.8;
+    z-index: 100; /* cria uma janela por cima da principal e sua poscição */
+    right: 0;
+    display: none;
+}
+
+#janelaEdicaoFundo.abrir{
+    display: block !important;
+}
+
+#fecharJanelaEdicao{
+    position: absolute;
+    top:15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #2d2c2c;
+    background: #2d2c2c;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+form{
+    width: 100%;
+    margin-top: 20px;
+
+}
+
+.form_linha{
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form_linha label{
+    margin-bottom: 7px;
+}
+
+.form_linha input{
+    padding: 15px;
+    border-radius: 12px;
+    outline: none;
+    border: 1px solid #191818;
+    font-size: 12px;
+    background: #2d2c2c;
+    color: #fff;
+}
+
+.form_linha button{
+    background: #2d2c2c;
+    border: 1px solid #191818;
+    padding: 7px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    color: #ccc;
+    cursor: pointer;
+    height: 50px;
+    font-size: 10px;
+    outline: none ;
+
+}
+
+.form_linha button:hover{
+
+    background: #3c3a3a;
+
+}
+
